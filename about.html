@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rakka Petshop</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #c8a9f0;
+    }
+
+    .navbar {
+      background-color: #b38ae0;
+    }
+
+    .about h5, .about h6 {
+      color: #000;
+    }
+
+    .about p {
+      color: #222;
+      text-align: justify;
+    }
+
+    .footer {
+      background-color: #a274db;
+      color: #000;
+      font-weight: 100vh;
+    }
+
+    .footer i {
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light shadow">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Rakka Petshop</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+              data-bs-target="#navbarNav" aria-controls="navbarNav" 
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active fw-bold" href="about.html">About us</a></li>
+          <li class="nav-item"><a class="nav-link" href="product.html">Product</a></li>
+          <li class="nav-item"><a class="nav-link" href="service.html">service</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- About Section -->
+  <section class="about py-5">
+    <div class="container">
+      <div class="row">
+        <!-- Sejarah Toko -->
+        <div class="col-md-8">
+          <h5 class="fw-bold">Sejarah Toko :</h5>
+          <p>
+            Rakka petshop & pancing berdiri tahun 2015 di Cipatik. 
+            Toko ini berawal dari hobi si pemilik yang mencintai hewan peliharaan 
+            sekaligus gemar memancing. Melihat banyaknya kebutuhan masyarakat 
+            terhadap produk perawatan hewan yang berkualitas serta perlengkapan 
+            memancing yang lengkap, maka didirikanlah Rakka petshop & pancing.
+          </p>
+          <div class="row mt-4">
+            <div class="col-md-6">
+              <h6 class="fw-bold">Visi :</h6>
+              <p>Menyediakan pakan hewan serba ada dengan harga kompetitif.</p>
+            </div>
+            <div class="col-md-6">
+              <h6 class="fw-bold">Misi :</h6>
+              <p>Menjadi toko terdepan di bidang pakan hewan dengan menyediakan produk berkualitas dan pelayanan terbaik.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Pemilik -->
+        <div class="col-md-4 text-center">
+          <h5 class="fw-bold">Pemilik Toko</h5>
+          <img src="aa.jpg" alt="Pemilik" class="img-fluid rounded shadow-sm mb-2" id="ownerImg">
+          <h6 class="mt-2">Rakka Azril</h6>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer py-3">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap">
+      <div class="d-flex align-items-center">
+        <i class="fas fa-phone fa-lg me-2"></i>
+        <span class="fw-bold">+62 896-8089-8279</span>
+      </div>
+      <span>© 2025 Rakka Petshop</span>
+      <a href="https://maps.app.goo.gl/F8dKzHZwNsUsmQjV8" target="_blank" class="text-dark">
+      <i class="fas fa-map-marker-alt fa-lg"></i>
+    </a>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Animasi kecil untuk gambar pemilik toko
+    document.addEventListener("DOMContentLoaded", function() {
+      const img = document.getElementById("ownerImg");
+      img.addEventListener("mouseenter", () => {
+        img.style.transform = "scale(1.05)";
+        img.style.transition = "0.3s";
+      });
+      img.addEventListener("mouseleave", () => {
+        img.style.transform = "scale(1)";
+      });
+    });
+  </script>
+</body>
+</html>
