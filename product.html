@@ -66,10 +66,27 @@
     }
 
     /* Footer */
-    .footer {
-      background: #b388eb;
-      color: #000;
-    }
+    footer {
+  background-color: #a274db;
+  color: #000;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+footer div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+footer i {
+  font-size: 20px;
+  margin-right: 5px;
+}
   </style>
 </head>
 <body>
@@ -84,8 +101,8 @@
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="about.html">About us</a></li>
-          <li class="nav-item"><a class="nav-link" href="testimoni.html">Testimoni</a></li>
           <li class="nav-item"><a class="nav-link" href="service.html">Service</a></li>
+          <li class="nav-item"><a class="nav-link" href="Testimoni.html">Testimoni</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
           <li class="nav-item">
             <button class="btn btn-sm btn-primary ms-3" onclick="toggleCart()">🛒 Keranjang (<span id="cart-count">0</span>)</button>
@@ -177,13 +194,17 @@
   </div>
 
   <!-- Footer -->
-  <footer class="footer text-center py-3">
-    <div class="container">
-      <p class="mb-1">
-        <i class="bi bi-telephone-fill"></i> 
-        <strong>+62 896-8089-8279</strong>
-      </p>
-      <p class="mb-0">&copy; 2025 Rakka Petshop</p>
+  <footer>
+    <div>
+      <i class="bi bi-telephone-fill"></i> +62 896-8089-8279
+    </div>
+    <div>
+      © 2025 Rakka Petshop
+    </div>
+    <div>
+      <a href="https://maps.app.goo.gl/F8dKzHZwNsUsmQjV8" target="_blank" class="text-dark">
+      <i class="bi bi-geo-alt-fill"></i> Lokasi Toko
+    </a>
     </div>
   </footer>
 
