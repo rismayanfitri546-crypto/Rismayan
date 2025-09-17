@@ -32,6 +32,7 @@
       transition: transform 0.3s ease;  
       height: 160px;  
       object-fit: cover;  
+      cursor: pointer;  
     }  
     .product-card img:hover {  
       transform: scale(1.15);  
@@ -119,7 +120,7 @@
         <!-- Produk -->  
         <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up">  
           <div class="card product-card text-center">  
-            <img src="kelinci.jpg" class="card-img-top" alt="Bunny Britter">  
+            <img src="kelinci.jpg" class="card-img-top" alt="Bunny Britter" onclick="showImage(this.src, this.alt)">  
             <div class="card-body">  
               <h6 class="fw-bold">Bunny Britter</h6>  
               <p>Rp. 45.000</p>  
@@ -130,7 +131,7 @@
 
         <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up" data-aos-delay="100">  
           <div class="card product-card text-center">  
-            <img src="whiskas.jpg" class="card-img-top" alt="Whiskas Junior">  
+            <img src="whiskas.jpg" class="card-img-top" alt="Whiskas Junior" onclick="showImage(this.src, this.alt)">  
             <div class="card-body">  
               <h6 class="fw-bold">Whiskas Junior</h6>  
               <p>Rp. 36.000</p>  
@@ -141,7 +142,7 @@
 
         <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up" data-aos-delay="200">  
           <div class="card product-card text-center">  
-            <img src="rocco.jpg" class="card-img-top" alt="Rocco Puppy">  
+            <img src="rocco.jpg" class="card-img-top" alt="Rocco Puppy" onclick="showImage(this.src, this.alt)">  
             <div class="card-body">  
               <h6 class="fw-bold">Rocco Puppy</h6>  
               <p>Rp. 65.000</p>  
@@ -152,7 +153,7 @@
 
         <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up" data-aos-delay="300">  
           <div class="card product-card text-center">  
-            <img src="royal.jpg" class="card-img-top" alt="Royal Canin">  
+            <img src="royal.jpg" class="card-img-top" alt="Royal Canin" onclick="showImage(this.src, this.alt)">  
             <div class="card-body">  
               <h6 class="fw-bold">Royal Canin</h6>  
               <p>Rp. 80.000</p>  
@@ -163,7 +164,7 @@
 
         <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up" data-aos-delay="400">  
           <div class="card product-card text-center">  
-            <img src="koi.jpg" class="card-img-top" alt="San-koi Spirulina">  
+            <img src="koi.jpg" class="card-img-top" alt="San-koi Spirulina" onclick="showImage(this.src, this.alt)">  
             <div class="card-body">  
               <h6 class="fw-bold">San-koi Spirulina</h6>  
               <p>Rp. 75.000</p>  
@@ -174,7 +175,7 @@
 
         <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up" data-aos-delay="500">  
           <div class="card product-card text-center">  
-            <img src="marmot.jpg" class="card-img-top" alt="Natural HamsterFood">  
+            <img src="marmot.jpg" class="card-img-top" alt="Natural HamsterFood" onclick="showImage(this.src, this.alt)">  
             <div class="card-body">  
               <h6 class="fw-bold">Natural HamsterFood</h6>  
               <p>Rp. 16.000</p>  
@@ -185,6 +186,15 @@
       </div>  
     </div>  
   </section>  
+
+  <!-- Modal untuk gambar -->  
+  <div class="modal fade" id="imageModal" tabindex="-1">  
+    <div class="modal-dialog modal-dialog-centered modal-lg">  
+      <div class="modal-content bg-transparent border-0">  
+        <img id="modalImage" src="" alt="" class="w-100 rounded">  
+      </div>  
+    </div>  
+  </div>  
 
   <!-- Keranjang -->  
   <div class="cart" id="cart">  
@@ -214,18 +224,21 @@
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>  
   <script>AOS.init();</script>  
 
-  <!-- Script Keranjang -->  
+  <!-- Script Keranjang + Modal Gambar -->  
   <script>  
     let cart = [];  
     let cartVisible = false;  
+
     function addToCart(name, price) {  
       cart.push({name, price});  
       renderCart();  
     }  
+
     function removeFromCart(index) {  
       cart.splice(index, 1);  
       renderCart();  
     }  
+
     function renderCart() {  
       const cartItems = document.getElementById("cart-items");  
       const cartCount = document.getElementById("cart-count");  
@@ -244,11 +257,20 @@
       cartCount.innerText = cart.length;  
       cartTotal.innerText = total.toLocaleString();  
     }  
+
     function toggleCart() {  
       const cartBox = document.getElementById("cart");  
       cartVisible = !cartVisible;  
       cartBox.style.display = cartVisible ? "block" : "none";  
     }  
+
+    // Fungsi tampilkan gambar ke modal  
+    function showImage(src, alt) {  
+      document.getElementById("modalImage").src = src;  
+      document.getElementById("modalImage").alt = alt;  
+      let modal = new bootstrap.Modal(document.getElementById('imageModal'));  
+      modal.show();  
+    }  
   </script>  
 </body>  
-  </html>
+                </html>
