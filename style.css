@@ -7,14 +7,29 @@ body {
 }
 
 /* Navbar */
-.navbar {
-  text-align: right;
-  background-color: #b38ae0;
-}
-.navbar-brand {
-  font-weight: bold;
-  color: black;
-}
+.navbar {                    
+      text-align: right;                    
+      background-color: #b085f5;                    
+    }   
+    /* Tambahan tombol kotak di navbar */ 
+    .navbar .nav-link {
+      background-color: #fff;
+      margin: 3px;
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-weight: 500;
+      color: #6a1b9a !important;
+      transition: all 0.3s ease-in-out;
+    }
+    .navbar .nav-link:hover {
+      background-color: #6a1b9a;
+      color: #fff !important;
+      transform: translateY(-2px);
+    }
+    .navbar .nav-link.active {
+      background-color: #6a1b9a;
+      color: #fff !important;
+    }               
 .navbar-brand img {
   height: 45px;
 }
