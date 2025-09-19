@@ -16,7 +16,26 @@
     .navbar {                    
       text-align: right;                    
       background-color: #b085f5;                    
-    }                    
+    }   
+    /* Tambahan tombol kotak di navbar */ 
+    .navbar .nav-link {
+      background-color: #fff;
+      margin: 3px;
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-weight: 500;
+      color: #6a1b9a !important;
+      transition: all 0.3s ease-in-out;
+    }
+    .navbar .nav-link:hover {
+      background-color: #6a1b9a;
+      color: #fff !important;
+      transform: translateY(-2px);
+    }
+    .navbar .nav-link.active {
+      background-color: #6a1b9a;
+      color: #fff !important;
+    }               
     .section-title {                    
       font-size: 1.8rem;                    
       font-weight: 700;                    
@@ -87,11 +106,11 @@
           <ul class="navbar-nav">                    
            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>                    
            <li class="nav-item"><a class="nav-link active fw-bold" href="about.html">About us</a></li>                    
-            <li class="nav-item"><a class="nav-link" href="product.html">Product</a></li>                    
+           <li class="nav-item"><a class="nav-link" href="product.html">Product</a></li>                    
            <li class="nav-item"><a class="nav-link" href="service.html">Service</a></li>                    
            <li class="nav-item"><a class="nav-link" href="testimoni.html">Testimoni</a></li>                    
            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>                    
-          </40pxul>                    
+          </ul>                    
       </div>                    
     </div>                    
   </nav>                    
