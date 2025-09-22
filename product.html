@@ -19,21 +19,10 @@
       flex-direction: column;
       min-height: 100vh;
     }
-
     /* Navbar */
-    .navbar {
-      text-align: right;
-      background-color: #b38ae0 !important;
-    }
-    .navbar-brand {
-      font-weight: bold;
-      color: black;
-    }
-    .navbar-brand img {
-      height: 45px;
-    }
-
-    /* Tombol kotak navbar */
+    .navbar { background-color: #b38ae0 !important; }
+    .navbar-brand { font-weight: bold; color: black; }
+    .navbar-brand img { height: 45px; }
     .navbar .nav-link {
       background-color: #fff;
       margin: 4px;
@@ -54,6 +43,15 @@
     }
 
     /* Produk */
+    .category-title {
+      font-weight: bold;
+      font-size: 20px;
+      margin: 25px 0 15px;
+      color: #4a148c;
+      border-bottom: 2px solid #6a1b9a;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
     .product-card {
       border: none;
       background: transparent;
@@ -66,16 +64,14 @@
       object-fit: cover;
       cursor: pointer;
     }
-    .product-card img:hover {
-      transform: scale(1.15);
-    }
+    .product-card img:hover { transform: scale(1.15); }
 
     /* Keranjang */
     .cart {
       position: fixed;
       top: 80px;
       right: 20px;
-      width: 200px;
+      width: 220px;
       background: #fff;
       border-radius: 10px;
       box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
@@ -83,16 +79,8 @@
       z-index: 1000;
       display: none;
     }
-    .cart h5 {
-      font-weight: bold;
-      border-bottom: 2px solid #ccc;
-      padding-bottom: 5px;
-    }
-    .cart-item {
-      display: flex;
-      justify-content: space-between;
-      margin: 5px 0;
-    }
+    .cart h5 { font-weight: bold; border-bottom: 2px solid #ccc; padding-bottom: 5px; }
+    .cart-item { display: flex; justify-content: space-between; margin: 5px 0; }
     .cart-item button {
       border: none;
       background: red;
@@ -112,16 +100,7 @@
       align-items: center;
       flex-wrap: wrap;
     }
-    footer div {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-    footer i {
-      font-size: 20px;
-      margin-right: 5px;
-    }
+    footer i { font-size: 20px; margin-right: 5px; }
   </style>
 </head>
 <body>
@@ -151,22 +130,13 @@
   <!-- Produk -->
   <section class="py-4">
     <div class="container">
+
+      <!-- Kucing -->
+      <h3 class="category-title" data-aos="fade-right">🐱 Makanan Kucing</h3>
       <div class="row g-3">
-        <!-- Produk -->
         <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up">
           <div class="card product-card text-center">
-            <img src="kelinci.jpg" class="card-img-top" alt="Bunny Britter" onclick="showImage(this.src, this.alt)">
-            <div class="card-body">
-              <h6 class="fw-bold">Bunny Britter</h6>
-              <p>Rp. 45.000</p>
-              <button class="btn btn-success btn-sm" onclick="addToCart('Bunny Britter', 45000)">Tambah</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up" data-aos-delay="100">
-          <div class="card product-card text-center">
-            <img src="whiskas.jpg" class="card-img-top" alt="Whiskas Junior" onclick="showImage(this.src, this.alt)">
+            <img src="whiskas.jpg" alt="Whiskas Junior" onclick="showImage(this.src, this.alt)">
             <div class="card-body">
               <h6 class="fw-bold">Whiskas Junior</h6>
               <p>Rp. 36.000</p>
@@ -174,21 +144,9 @@
             </div>
           </div>
         </div>
-
-        <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up" data-aos-delay="100">
           <div class="card product-card text-center">
-            <img src="rocco.jpg" class="card-img-top" alt="Rocco Puppy" onclick="showImage(this.src, this.alt)">
-            <div class="card-body">
-              <h6 class="fw-bold">Rocco Puppy</h6>
-              <p>Rp. 65.000</p>
-              <button class="btn btn-success btn-sm" onclick="addToCart('Rocco Puppy', 65000)">Tambah</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up" data-aos-delay="300">
-          <div class="card product-card text-center">
-            <img src="royal.jpg" class="card-img-top" alt="Royal Canin" onclick="showImage(this.src, this.alt)">
+            <img src="royal.jpg" alt="Royal Canin" onclick="showImage(this.src, this.alt)">
             <div class="card-body">
               <h6 class="fw-bold">Royal Canin</h6>
               <p>Rp. 80.000</p>
@@ -196,10 +154,44 @@
             </div>
           </div>
         </div>
+      </div>
 
-        <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up" data-aos-delay="400">
+      <!-- Anjing -->
+      <h3 class="category-title" data-aos="fade-right">🐶 Makanan Anjing</h3>
+      <div class="row g-3">
+        <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up">
           <div class="card product-card text-center">
-            <img src="koi.jpg" class="card-img-top" alt="San-koi Spirulina" onclick="showImage(this.src, this.alt)">
+            <img src="rocco.jpg" alt="Rocco Puppy" onclick="showImage(this.src, this.alt)">
+            <div class="card-body">
+              <h6 class="fw-bold">Rocco Puppy</h6>
+              <p>Rp. 65.000</p>
+              <button class="btn btn-success btn-sm" onclick="addToCart('Rocco Puppy', 65000)">Tambah</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kelinci -->
+      <h3 class="category-title" data-aos="fade-right">🐰 Makanan Kelinci</h3>
+      <div class="row g-3">
+        <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up">
+          <div class="card product-card text-center">
+            <img src="kelinci.jpg" alt="Bunny Britter" onclick="showImage(this.src, this.alt)">
+            <div class="card-body">
+              <h6 class="fw-bold">Bunny Britter</h6>
+              <p>Rp. 45.000</p>
+              <button class="btn btn-success btn-sm" onclick="addToCart('Bunny Britter', 45000)">Tambah</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ikan -->
+      <h3 class="category-title" data-aos="fade-right">🐟 Makanan Ikan</h3>
+      <div class="row g-3">
+        <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up">
+          <div class="card product-card text-center">
+            <img src="koi.jpg" alt="San-koi Spirulina" onclick="showImage(this.src, this.alt)">
             <div class="card-body">
               <h6 class="fw-bold">San-koi Spirulina</h6>
               <p>Rp. 75.000</p>
@@ -207,10 +199,14 @@
             </div>
           </div>
         </div>
+      </div>
 
-        <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up" data-aos-delay="500">
+      <!-- Hamster -->
+      <h3 class="category-title" data-aos="fade-right">🐹 Makanan Hamster</h3>
+      <div class="row g-3">
+        <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up">
           <div class="card product-card text-center">
-            <img src="marmot.jpg" class="card-img-top" alt="Natural HamsterFood" onclick="showImage(this.src, this.alt)">
+            <img src="marmot.jpg" alt="Natural HamsterFood" onclick="showImage(this.src, this.alt)">
             <div class="card-body">
               <h6 class="fw-bold">Natural HamsterFood</h6>
               <p>Rp. 16.000</p>
@@ -219,6 +215,7 @@
           </div>
         </div>
       </div>
+
     </div>
   </section>
 
@@ -240,17 +237,9 @@
 
   <!-- Footer -->
   <footer>
-    <div>
-      <i class="bi bi-telephone-fill"></i> +62 896-8089-8279
-    </div>
-    <div>
-      © 2025 Rakka Petshop
-    </div>
-    <div>
-      <a href="https://maps.app.goo.gl/F8dKzHZwNsUsmQjV8" target="_blank" class="text-dark">
-        <i class="bi bi-geo-alt-fill"></i> Lokasi Toko
-      </a>
-    </div>
+    <div><i class="bi bi-telephone-fill"></i> +62 896-8089-8279</div>
+    <div>© 2025 Rakka Petshop</div>
+    <div><a href="https://maps.app.goo.gl/F8dKzHZwNsUsmQjV8" target="_blank" class="text-dark"><i class="bi bi-geo-alt-fill"></i> Lokasi Toko</a></div>
   </footer>
 
   <!-- Bootstrap JS -->
@@ -263,17 +252,14 @@
   <script>
     let cart = [];
     let cartVisible = false;
-
     function addToCart(name, price) {
       cart.push({name, price});
       renderCart();
     }
-
     function removeFromCart(index) {
       cart.splice(index, 1);
       renderCart();
     }
-
     function renderCart() {
       const cartItems = document.getElementById("cart-items");
       const cartCount = document.getElementById("cart-count");
@@ -292,14 +278,11 @@
       cartCount.innerText = cart.length;
       cartTotal.innerText = total.toLocaleString();
     }
-
     function toggleCart() {
       const cartBox = document.getElementById("cart");
       cartVisible = !cartVisible;
       cartBox.style.display = cartVisible ? "block" : "none";
     }
-
-    // Fungsi tampilkan gambar ke modal
     function showImage(src, alt) {
       document.getElementById("modalImage").src = src;
       document.getElementById("modalImage").alt = alt;
@@ -308,4 +291,4 @@
     }
   </script>
 </body>
-                </html>
+  </html>
