@@ -15,9 +15,6 @@
     body {
       background-color: #c8a9f0;
       font-family: "Poppins", sans-serif;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
     }
 
     /* Navbar */
@@ -29,70 +26,17 @@
       font-weight: bold;
       color: black;
     }
-    .navbar-brand img {
-      height: 45px;
-    }
-
-    /* Tombol kotak navbar */
-    .navbar .nav-link {
-      background-color: #fff;
-      margin: 4px;
-      padding: 6px 14px;
-      border-radius: 8px;
-      font-weight: 500;
-      color: #6a1b9a !important;
-      transition: all 0.3s ease-in-out;
-    }
-    .navbar .nav-link:hover {
-      background-color: #6a1b9a;
-      color: #fff !important;
-      transform: translateY(-2px);
-    }
-    .navbar .nav-link.active {
-      background-color: #6a1b9a;
-      color: #fff !important;
-    }
 
     /* Produk */
-    .product-card {
-      border: none;
-      background: transparent;
-      transition: transform 0.3s ease;
-    }
     .product-card img {
       border-radius: 5px;
-      transition: transform 0.3s ease;
       height: 160px;
       object-fit: cover;
       cursor: pointer;
+      transition: transform 0.3s ease;
     }
     .product-card img:hover {
-      transform: scale(1.15);
-    }
-    .product-card p {
-      font-size: 14px;
-      margin-bottom: 0;
-    }
-
-    /* Footer */
-    footer {
-      background-color: #a274db;
-      color: #000;
-      padding: 15px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-    footer div {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-    footer i {
-      font-size: 20px;
-      margin-right: 5px;
+      transform: scale(1.1);
     }
   </style>
 </head>
@@ -121,97 +65,59 @@
   <section class="py-4">
     <div class="container">
       <div class="row g-3">
-        <!-- Produk Kelinci -->
+        <!-- Produk 1 -->
         <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up">
           <div class="card product-card text-center">
-            <img src="kelinci.png" class="card-img-top" alt="Bunny Britter" onclick="showImage(this.src, this.alt)">
+            <img src="kelinci.png" class="card-img-top" alt="Bunny Britter">
             <div class="card-body">
               <h6 class="fw-bold">Bunny Britter</h6>
-              <p>Makanan sehat untuk kelinci, kaya serat alami dan vitamin. <br><b>Rp. 45.000</b></p>
+              <p>Rp. 45.000</p>
+              <button class="btn btn-sm btn-primary" data-bs-toggle="collapse" data-bs-target="#desc1">Detail</button>
+              <div id="desc1" class="collapse mt-2">
+                <small>Makanan sehat khusus kelinci dengan kandungan vitamin lengkap untuk bulu yang lembut.</small>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- Produk Kucing -->
+        <!-- Produk 2 -->
         <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up" data-aos-delay="100">
           <div class="card product-card text-center">
-            <img src="whiskas.png" class="card-img-top" alt="Whiskas Junior" onclick="showImage(this.src, this.alt)">
+            <img src="whiskas.png" class="card-img-top" alt="Whiskas Junior">
             <div class="card-body">
               <h6 class="fw-bold">Whiskas Junior</h6>
-              <p>Makanan kucing anakan dengan nutrisi lengkap untuk pertumbuhan. <br><b>Rp. 36.000</b></p>
+              <p>Rp. 36.000</p>
+              <button class="btn btn-sm btn-primary" data-bs-toggle="collapse" data-bs-target="#desc2">Detail</button>
+              <div id="desc2" class="collapse mt-2">
+                <small>Makanan kucing kecil usia 2–12 bulan, kaya akan nutrisi untuk pertumbuhan optimal.</small>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- Produk Anjing -->
+        <!-- Produk 3 -->
         <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up" data-aos-delay="200">
           <div class="card product-card text-center">
-            <img src="rocco.png" class="card-img-top" alt="Rocco Puppy" onclick="showImage(this.src, this.alt)">
+            <img src="rocco.png" class="card-img-top" alt="Rocco Puppy">
             <div class="card-body">
               <h6 class="fw-bold">Rocco Puppy</h6>
-              <p>Pakan premium untuk anak anjing dengan protein tinggi. <br><b>Rp. 65.000</b></p>
+              <p>Rp. 65.000</p>
+              <button class="btn btn-sm btn-primary" data-bs-toggle="collapse" data-bs-target="#desc3">Detail</button>
+              <div id="desc3" class="collapse mt-2">
+                <small>Makanan anjing puppy dengan protein tinggi untuk mendukung energi dan pertumbuhan.</small>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- Produk Anjing -->
-        <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up" data-aos-delay="300">
-          <div class="card product-card text-center">
-            <img src="royal.png" class="card-img-top" alt="Royal Canin" onclick="showImage(this.src, this.alt)">
-            <div class="card-body">
-              <h6 class="fw-bold">Royal Canin</h6>
-              <p>Pakan anjing dewasa dengan formula seimbang. <br><b>Rp. 80.000</b></p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Produk Ikan -->
-        <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up" data-aos-delay="400">
-          <div class="card product-card text-center">
-            <img src="koi.png" class="card-img-top" alt="San-koi Spirulina" onclick="showImage(this.src, this.alt)">
-            <div class="card-body">
-              <h6 class="fw-bold">San-koi Spirulina</h6>
-              <p>Makanan ikan koi dengan spirulina untuk warna cerah. <br><b>Rp. 75.000</b></p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Produk Hamster -->
-        <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up" data-aos-delay="500">
-          <div class="card product-card text-center">
-            <img src="marmot.png" class="card-img-top" alt="Natural HamsterFood" onclick="showImage(this.src, this.alt)">
-            <div class="card-body">
-              <h6 class="fw-bold">Natural HamsterFood</h6>
-              <p>Campuran biji-bijian alami untuk hamster sehat. <br><b>Rp. 16.000</b></p>
-            </div>
-          </div>
-        </div>
+        <!-- Tambahkan produk lain dengan pola yang sama -->
       </div>
     </div>
   </section>
 
-  <!-- Modal untuk gambar -->
-  <div class="modal fade" id="imageModal" tabindex="-1">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content bg-transparent border-0">
-        <img id="modalImage" src="" alt="" class="w-100 rounded">
-      </div>
-    </div>
-  </div>
-
   <!-- Footer -->
-  <footer>
-    <div>
-      <i class="bi bi-telephone-fill"></i> +62 896-8089-8279
-    </div>
-    <div>
-      © 2025 Rakka Petshop
-    </div>
-    <div>
-      <a href="https://maps.app.goo.gl/F8dKzHZwNsUsmQjV8" target="_blank" class="text-dark">
-        <i class="bi bi-geo-alt-fill"></i> Lokasi Toko
-      </a>
-    </div>
+  <footer class="p-3 text-center bg-light">
+    <p>© 2025 Rakka Petshop | <a href="https://maps.app.goo.gl/F8dKzHZwNsUsmQjV8" target="_blank">Lokasi Toko</a></p>
   </footer>
 
   <!-- Bootstrap JS -->
@@ -219,15 +125,5 @@
   <!-- AOS JS -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>AOS.init();</script>
-
-  <!-- Script Modal Gambar -->
-  <script>
-    function showImage(src, alt) {
-      document.getElementById("modalImage").src = src;
-      document.getElementById("modalImage").alt = alt;
-      let modal = new bootstrap.Modal(document.getElementById('imageModal'));
-      modal.show();
-    }
-  </script>
 </body>
 </html>
