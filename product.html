@@ -69,37 +69,9 @@
     .product-card img:hover {
       transform: scale(1.15);
     }
-
-    /* Keranjang */
-    .cart {
-      position: fixed;
-      top: 80px;
-      right: 20px;
-      width: 200px;
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
-      padding: 15px;
-      z-index: 1000;
-      display: none;
-    }
-    .cart h5 {
-      font-weight: bold;
-      border-bottom: 2px solid #ccc;
-      padding-bottom: 5px;
-    }
-    .cart-item {
-      display: flex;
-      justify-content: space-between;
-      margin: 5px 0;
-    }
-    .cart-item button {
-      border: none;
-      background: red;
-      color: #fff;
-      padding: 2px 6px;
-      border-radius: 4px;
-      cursor: pointer;
+    .product-card p {
+      font-size: 14px;
+      margin-bottom: 0;
     }
 
     /* Footer */
@@ -140,9 +112,6 @@
           <li class="nav-item"><a class="nav-link" href="service.html">Service</a></li>
           <li class="nav-item"><a class="nav-link" href="testimoni.html">Testimoni</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-          <li class="nav-item">
-            <button class="btn btn-sm btn-primary ms-3" onclick="toggleCart()">🛒 Keranjang (<span id="cart-count">0</span>)</button>
-          </li>
         </ul>
       </div>
     </div>
@@ -152,69 +121,68 @@
   <section class="py-4">
     <div class="container">
       <div class="row g-3">
-        <!-- Produk -->
+        <!-- Produk Kelinci -->
         <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up">
           <div class="card product-card text-center">
             <img src="kelinci.png" class="card-img-top" alt="Bunny Britter" onclick="showImage(this.src, this.alt)">
             <div class="card-body">
               <h6 class="fw-bold">Bunny Britter</h6>
-              <p>Rp. 45.000</p>
-              <button class="btn btn-success btn-sm" onclick="addToCart('Bunny Britter', 45000)">Tambah</button>
+              <p>Makanan sehat untuk kelinci, kaya serat alami dan vitamin. <br><b>Rp. 45.000</b></p>
             </div>
           </div>
         </div>
 
+        <!-- Produk Kucing -->
         <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up" data-aos-delay="100">
           <div class="card product-card text-center">
             <img src="whiskas.png" class="card-img-top" alt="Whiskas Junior" onclick="showImage(this.src, this.alt)">
             <div class="card-body">
               <h6 class="fw-bold">Whiskas Junior</h6>
-              <p>Rp. 36.000</p>
-              <button class="btn btn-success btn-sm" onclick="addToCart('Whiskas Junior', 36000)">Tambah</button>
+              <p>Makanan kucing anakan dengan nutrisi lengkap untuk pertumbuhan. <br><b>Rp. 36.000</b></p>
             </div>
           </div>
         </div>
 
+        <!-- Produk Anjing -->
         <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up" data-aos-delay="200">
           <div class="card product-card text-center">
             <img src="rocco.png" class="card-img-top" alt="Rocco Puppy" onclick="showImage(this.src, this.alt)">
             <div class="card-body">
               <h6 class="fw-bold">Rocco Puppy</h6>
-              <p>Rp. 65.000</p>
-              <button class="btn btn-success btn-sm" onclick="addToCart('Rocco Puppy', 65000)">Tambah</button>
+              <p>Pakan premium untuk anak anjing dengan protein tinggi. <br><b>Rp. 65.000</b></p>
             </div>
           </div>
         </div>
 
+        <!-- Produk Anjing -->
         <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up" data-aos-delay="300">
           <div class="card product-card text-center">
             <img src="royal.png" class="card-img-top" alt="Royal Canin" onclick="showImage(this.src, this.alt)">
             <div class="card-body">
               <h6 class="fw-bold">Royal Canin</h6>
-              <p>Rp. 80.000</p>
-              <button class="btn btn-success btn-sm" onclick="addToCart('Royal Canin', 80000)">Tambah</button>
+              <p>Pakan anjing dewasa dengan formula seimbang. <br><b>Rp. 80.000</b></p>
             </div>
           </div>
         </div>
 
+        <!-- Produk Ikan -->
         <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up" data-aos-delay="400">
           <div class="card product-card text-center">
             <img src="koi.png" class="card-img-top" alt="San-koi Spirulina" onclick="showImage(this.src, this.alt)">
             <div class="card-body">
               <h6 class="fw-bold">San-koi Spirulina</h6>
-              <p>Rp. 75.000</p>
-              <button class="btn btn-success btn-sm" onclick="addToCart('San-koi Spirulina', 75000)">Tambah</button>
+              <p>Makanan ikan koi dengan spirulina untuk warna cerah. <br><b>Rp. 75.000</b></p>
             </div>
           </div>
         </div>
 
+        <!-- Produk Hamster -->
         <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up" data-aos-delay="500">
           <div class="card product-card text-center">
             <img src="marmot.png" class="card-img-top" alt="Natural HamsterFood" onclick="showImage(this.src, this.alt)">
             <div class="card-body">
               <h6 class="fw-bold">Natural HamsterFood</h6>
-              <p>Rp. 16.000</p>
-              <button class="btn btn-success btn-sm" onclick="addToCart('Natural HamsterFood', 16000)">Tambah</button>
+              <p>Campuran biji-bijian alami untuk hamster sehat. <br><b>Rp. 16.000</b></p>
             </div>
           </div>
         </div>
@@ -229,13 +197,6 @@
         <img id="modalImage" src="" alt="" class="w-100 rounded">
       </div>
     </div>
-  </div>
-
-  <!-- Keranjang -->
-  <div class="cart" id="cart">
-    <h5>Keranjang Belanja</h5>
-    <div id="cart-items"></div>
-    <p class="fw-bold mt-2">Total: Rp <span id="cart-total">0</span></p>
   </div>
 
   <!-- Footer -->
@@ -259,47 +220,8 @@
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>AOS.init();</script>
 
-  <!-- Script Keranjang + Modal Gambar -->
+  <!-- Script Modal Gambar -->
   <script>
-    let cart = [];
-    let cartVisible = false;
-
-    function addToCart(name, price) {
-      cart.push({name, price});
-      renderCart();
-    }
-
-    function removeFromCart(index) {
-      cart.splice(index, 1);
-      renderCart();
-    }
-
-    function renderCart() {
-      const cartItems = document.getElementById("cart-items");
-      const cartCount = document.getElementById("cart-count");
-      const cartTotal = document.getElementById("cart-total");
-      cartItems.innerHTML = "";
-      let total = 0;
-      cart.forEach((item, index) => {
-        total += item.price;
-        cartItems.innerHTML += `
-          <div class="cart-item">
-            <span>${item.name}</span>
-            <span>Rp ${item.price.toLocaleString()}</span>
-            <button onclick="removeFromCart(${index})">X</button>
-          </div>`;
-      });
-      cartCount.innerText = cart.length;
-      cartTotal.innerText = total.toLocaleString();
-    }
-
-    function toggleCart() {
-      const cartBox = document.getElementById("cart");
-      cartVisible = !cartVisible;
-      cartBox.style.display = cartVisible ? "block" : "none";
-    }
-
-    // Fungsi tampilkan gambar ke modal
     function showImage(src, alt) {
       document.getElementById("modalImage").src = src;
       document.getElementById("modalImage").alt = alt;
@@ -308,4 +230,4 @@
     }
   </script>
 </body>
-        </html>
+</html>
