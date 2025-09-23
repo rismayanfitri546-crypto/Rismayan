@@ -20,7 +20,6 @@
       min-height: 100vh;
     }
 
-    /* Navbar */
     .navbar {
       text-align: right;
       background-color: #b38ae0 !important;
@@ -29,11 +28,7 @@
       font-weight: bold;
       color: black;
     }
-    .navbar-brand img {
-      height: 45px;
-    }
 
-    /* Tombol kotak navbar */
     .navbar .nav-link {
       background-color: #fff;
       margin: 4px;
@@ -70,17 +65,20 @@
       transform: scale(1.15);
     }
 
-    /* Footer */
+    /* Kategori */
+    .category-title {
+      margin: 40px 0 20px;
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: #4a148c;
+      border-left: 5px solid #6a1b9a;
+      padding-left: 10px;
+    }
+
     footer {
       background-color: #a274db;
       color: #000;
       padding: 15px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-    footer div {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -116,8 +114,53 @@
   <!-- Produk -->
   <section class="py-4">
     <div class="container">
+      
+      <!-- Kategori Kucing -->
+      <h3 class="category-title">Makanan Kucing</h3>
       <div class="row g-3">
-        <!-- Produk -->
+        <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up">
+          <div class="card product-card text-center">
+            <img src="whiskas.png" class="card-img-top"
+                 alt="Whiskas Junior"
+                 onclick="showImage(this.src, this.alt, 'Whiskas khusus anak kucing, kaya protein dan vitamin untuk pertumbuhan optimal.')">
+            <div class="card-body">
+              <h6 class="fw-bold">Whiskas Junior</h6>
+              <p>Rp. 36.000</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="card product-card text-center">
+            <img src="royal.png" class="card-img-top"
+                 alt="Royal Canin"
+                 onclick="showImage(this.src, this.alt, 'Makanan kucing premium Royal Canin dengan nutrisi seimbang untuk kesehatan bulu dan pencernaan.')">
+            <div class="card-body">
+              <h6 class="fw-bold">Royal Canin</h6>
+              <p>Rp. 80.000</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kategori Anjing -->
+      <h3 class="category-title">Makanan Anjing</h3>
+      <div class="row g-3">
+        <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up">
+          <div class="card product-card text-center">
+            <img src="rocco.png" class="card-img-top"
+                 alt="Rocco Puppy"
+                 onclick="showImage(this.src, this.alt, 'Makanan anjing puppy premium dengan rasa daging asli, membantu pertumbuhan sehat.')">
+            <div class="card-body">
+              <h6 class="fw-bold">Rocco Puppy</h6>
+              <p>Rp. 65.000</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kategori Hewan Kecil -->
+      <h3 class="category-title">Hewan Kecil</h3>
+      <div class="row g-3">
         <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up">
           <div class="card product-card text-center">
             <img src="kelinci.png" class="card-img-top"
@@ -129,56 +172,7 @@
             </div>
           </div>
         </div>
-
         <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up" data-aos-delay="100">
-          <div class="card product-card text-center">
-            <img src="whiskas.png" class="card-img-top"
-                 alt="Whiskas Junior"
-                 onclick="showImage(this.src, this.alt, 'Whiskas khusus anak kucing, kaya protein dan vitamin untuk pertumbuhan optimal.')">
-            <div class="card-body">
-              <h6 class="fw-bold">Whiskas Junior</h6>
-              <p>Rp. 36.000</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up" data-aos-delay="200">
-          <div class="card product-card text-center">
-            <img src="rocco.png" class="card-img-top"
-                 alt="Rocco Puppy"
-                 onclick="showImage(this.src, this.alt, 'Makanan anjing puppy premium dengan rasa daging asli, membantu pertumbuhan sehat.')">
-            <div class="card-body">
-              <h6 class="fw-bold">Rocco Puppy</h6>
-              <p>Rp. 65.000</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up" data-aos-delay="300">
-          <div class="card product-card text-center">
-            <img src="royal.png" class="card-img-top"
-                 alt="Royal Canin"
-                 onclick="showImage(this.src, this.alt, 'Makanan kucing premium Royal Canin dengan nutrisi seimbang untuk kesehatan bulu dan pencernaan.')">
-            <div class="card-body">
-              <h6 class="fw-bold">Royal Canin</h6>
-              <p>Rp. 80.000</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up" data-aos-delay="400">
-          <div class="card product-card text-center">
-            <img src="koi.png" class="card-img-top"
-                 alt="San-koi Spirulina"
-                 onclick="showImage(this.src, this.alt, 'Pakan ikan koi berkualitas dengan kandungan spirulina, menjaga warna dan kesehatan ikan.')">
-            <div class="card-body">
-              <h6 class="fw-bold">San-koi Spirulina</h6>
-              <p>Rp. 75.000</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up" data-aos-delay="500">
           <div class="card product-card text-center">
             <img src="marmot.png" class="card-img-top"
                  alt="Natural HamsterFood"
@@ -190,10 +184,27 @@
           </div>
         </div>
       </div>
+
+      <!-- Kategori Ikan -->
+      <h3 class="category-title">Makanan Ikan</h3>
+      <div class="row g-3">
+        <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up">
+          <div class="card product-card text-center">
+            <img src="koi.png" class="card-img-top"
+                 alt="San-koi Spirulina"
+                 onclick="showImage(this.src, this.alt, 'Pakan ikan koi berkualitas dengan kandungan spirulina, menjaga warna dan kesehatan ikan.')">
+            <div class="card-body">
+              <h6 class="fw-bold">San-koi Spirulina</h6>
+              <p>Rp. 75.000</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <!-- Modal untuk gambar + deskripsi -->
+  <!-- Modal -->
   <div class="modal fade" id="imageModal" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered modal-lg">
       <div class="modal-content p-3">
@@ -225,7 +236,6 @@
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>AOS.init();</script>
 
-  <!-- Script Modal -->
   <script>
     function showImage(src, title, desc) {
       document.getElementById("modalImage").src = src;
@@ -236,4 +246,4 @@
     }
   </script>
 </body>
-                </html>
+</html>
