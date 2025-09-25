@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rakka Petshop - Produk</title>
+  <title>Rakka Petshop - Product & Service</title>
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Bootstrap Icons -->
@@ -22,10 +22,6 @@
     .navbar {
       text-align: right;
       background-color: #b38ae0 !important;
-    }
-    .navbar-brand {
-      font-weight: bold;
-      color: black;
     }
     .navbar .nav-link {
       background-color: #fff;
@@ -61,6 +57,23 @@
     .product-card img:hover {
       transform: scale(1.15);
     }
+    /* Service */
+    .service-item img {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto 10px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .service-item img:hover {
+      transform: scale(1.1);
+    }
+    .service-item p {
+      text-align: center;
+      font-weight: 500;
+    }
     footer {
       background-color: #a274db;
       color: #000;
@@ -69,7 +82,7 @@
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
-      margin-top: auto; /* supaya footer selalu di bawah */
+      margin-top: auto;
     }
     footer i {
       font-size: 20px;
@@ -89,8 +102,7 @@
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="about.html">About us</a></li>
-          <li class="nav-item"><a class="nav-link active fw-bold" href="product.html">Product</a></li>
-          <li class="nav-item"><a class="nav-link" href="service.html">Service</a></li>
+          <li class="nav-item"><a class="nav-link active fw-bold" href="product-service.html">Product & Service</a></li>
           <li class="nav-item"><a class="nav-link" href="testimoni.html">Testimoni</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
@@ -98,17 +110,17 @@
     </div>
   </nav>
 
-  <!-- Produk dengan Tabs -->
+  <!-- Produk -->
   <section class="py-4">
     <div class="container">
-      <!-- Nav Tabs -->
+      <h4 class="fw-bold text-center mb-4" data-aos="fade-down">Produk Kami</h4>
+      <!-- Tabs -->
       <ul class="nav nav-tabs justify-content-center mb-4" id="productTabs" role="tablist">
         <li class="nav-item"><button class="nav-link active" id="kucing-tab" data-bs-toggle="tab" data-bs-target="#kucing" type="button" role="tab">Makanan Kucing</button></li>
         <li class="nav-item"><button class="nav-link" id="anjing-tab" data-bs-toggle="tab" data-bs-target="#anjing" type="button" role="tab">Makanan Anjing</button></li>
         <li class="nav-item"><button class="nav-link" id="hewan-tab" data-bs-toggle="tab" data-bs-target="#hewan" type="button" role="tab">Hewan Kecil</button></li>
         <li class="nav-item"><button class="nav-link" id="ikan-tab" data-bs-toggle="tab" data-bs-target="#ikan" type="button" role="tab">Makanan Ikan</button></li>
       </ul>
-
       <!-- Tab Content -->
       <div class="tab-content">
         <!-- Kucing -->
@@ -134,7 +146,6 @@
             </div>
           </div>
         </div>
-
         <!-- Anjing -->
         <div class="tab-pane fade" id="anjing" role="tabpanel">
           <div class="row g-3">
@@ -149,7 +160,6 @@
             </div>
           </div>
         </div>
-
         <!-- Hewan Kecil -->
         <div class="tab-pane fade" id="hewan" role="tabpanel">
           <div class="row g-3">
@@ -173,7 +183,6 @@
             </div>
           </div>
         </div>
-
         <!-- Ikan -->
         <div class="tab-pane fade" id="ikan" role="tabpanel">
           <div class="row g-3">
@@ -192,7 +201,42 @@
     </div>
   </section>
 
-  <!-- Modal -->
+  <!-- Service Section -->
+  <section class="py-5">
+    <div class="container">
+      <h4 class="fw-bold text-center mb-5" data-aos="fade-down">Layanan Kami</h4>
+      <div class="row text-center">
+        <div class="col-md-4 service-item" data-aos="fade-up">
+          <img src="makanan.png" alt="Produk Lengkap" data-bs-toggle="modal" data-bs-target="#modalMakanan">
+          <p>Produk lengkap <br> dan berkualitas</p>
+        </div>
+        <div class="col-md-4 service-item" data-aos="fade-up" data-aos-delay="100">
+          <img src="duit.png" alt="Harga Terjangkau" data-bs-toggle="modal" data-bs-target="#modalHarga">
+          <p>Harga Terjangkau</p>
+        </div>
+        <div class="col-md-4 service-item" data-aos="fade-up" data-aos-delay="200">
+          <img src="layanan.png" alt="Pelayanan Ramah" data-bs-toggle="modal" data-bs-target="#modalLayanan">
+          <p>Pelayanan ramah <br> dan cepat</p>
+        </div>
+      </div>
+      <!-- Why Choose Us -->
+      <div class="row mt-5" data-aos="zoom-in">
+        <div class="col-md-8 offset-md-2 text-center">
+          <h5 class="fw-bold">Kenapa Memilih Rakka Petshop?</h5>
+          <p>Kami menyediakan produk hewan berkualitas dengan harga terjangkau, layanan ramah, dan selalu siap membantu kebutuhan hewan kesayangan Anda.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div><i class="bi bi-telephone-fill"></i> +62 896-8089-8279</div>
+    <div>© 2025 Rakka Petshop</div>
+    <div><a href="https://maps.app.goo.gl/F8dKzHZwNsUsmQjV8" target="_blank" class="text-dark"><i class="bi bi-geo-alt-fill"></i> Lokasi Toko</a></div>
+  </footer>
+
+  <!-- Modal Produk -->
   <div class="modal fade" id="imageModal" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered modal-lg">
       <div class="modal-content p-3">
@@ -203,12 +247,40 @@
     </div>
   </div>
 
-  <!-- Footer -->
-  <footer>
-    <div><i class="bi bi-telephone-fill"></i> +62 896-8089-8279</div>
-    <div>© 2025 Rakka Petshop</div>
-    <div><a href="https://maps.app.goo.gl/F8dKzHZwNsUsmQjV8" target="_blank" class="text-dark"><i class="bi bi-geo-alt-fill"></i> Lokasi Toko</a></div>
-  </footer>
+  <!-- Modal Service -->
+  <div class="modal fade" id="modalMakanan" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body text-center">
+          <img src="makanan.png" class="img-fluid mb-3" alt="Produk Lengkap">
+          <h6 class="fw-bold">Produk Lengkap dan Berkualitas</h6>
+          <p>Kami menyediakan berbagai macam makanan, vitamin, dan aksesoris untuk hewan peliharaan Anda.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="modalHarga" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body text-center">
+          <img src="duit.png" class="img-fluid mb-3" alt="Harga Terjangkau">
+          <h6 class="fw-bold">Harga Terjangkau</h6>
+          <p>Produk dengan kualitas terbaik namun tetap ramah di kantong.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="modalLayanan" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body text-center">
+          <img src="layanan.png" class="img-fluid mb-3" alt="Pelayanan Ramah">
+          <h6 class="fw-bold">Pelayanan Ramah dan Cepat</h6>
+          <p>Staf kami siap melayani Anda dengan ramah, cepat, dan profesional.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -226,4 +298,4 @@
     }
   </script>
 </body>
-              </html>
+</html>
