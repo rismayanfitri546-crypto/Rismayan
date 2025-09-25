@@ -88,6 +88,30 @@
       font-size: 20px;
       margin-right: 5px;
     }
+    /* Tombol Tanyakan Kami */
+    .btn-tanya {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: white;
+      font-weight: 600;
+      padding: 12px 18px;
+      border-radius: 30px;
+      text-decoration: none;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+      transition: all 0.3s ease-in-out;
+      z-index: 9999;
+    }
+    .btn-tanya:hover {
+      background-color: #128c7e;
+      transform: scale(1.05);
+      color: #fff;
+    }
+    .btn-tanya i {
+      margin-right: 6px;
+      font-size: 18px;
+    }
   </style>
 </head>
 <body>
@@ -236,6 +260,12 @@
     <div><a href="https://maps.app.goo.gl/F8dKzHZwNsUsmQjV8" target="_blank" class="text-dark"><i class="bi bi-geo-alt-fill"></i> Lokasi Toko</a></div>
   </footer>
 
+  <!-- Tombol Floating Tanya -->
+  <a href="https://wa.me/6289680898279?text=Halo%20Rakka%20Petshop,%20saya%20ingin%20bertanya."
+     class="btn-tanya" target="_blank">
+    <i class="bi bi-whatsapp"></i> Tanyakan Kami
+  </a>
+
   <!-- Modal Produk -->
   <div class="modal fade" id="imageModal" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered modal-lg">
@@ -298,4 +328,4 @@
     }
   </script>
 </body>
-</html>
+  </html>
