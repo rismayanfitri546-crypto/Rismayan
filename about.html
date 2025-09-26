@@ -1,183 +1,183 @@
-<!DOCTYPE html>                   
-<html lang="id">                    
-<head>                    
-  <meta charset="UTF-8">                    
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">                    
-  <title>Rakka Petshop</title>                    
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">                    
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">                    
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">                    
-                    
-  <style>                    
-    body {                    
-      font-family: Arial, sans-serif;                    
-      background-color: #d1a3ff;   
-      /* Tambahan pola titik-titik */
-      background-image: radial-gradient(#c084f5 1px, transparent 1px);
-      background-size: 25px 25px;
-    }                    
-    .navbar {                    
-      text-align: right;                    
-      background-color: #b085f5;                    
-    }   
-    /* Tombol kotak di navbar */ 
-    .navbar .nav-link {
-      background-color: #fff;
-      margin: 3px;
-      padding: 6px 14px;
-      border-radius: 8px;
-      font-weight: 500;
-      color: #6a1b9a !important;
-      transition: all 0.3s ease-in-out;
-    }
-    .navbar .nav-link:hover {
-      background-color: #6a1b9a;
-      color: #fff !important;
-      transform: translateY(-2px);
-    }
-    .navbar .nav-link.active {
-      background-color: #6a1b9a;
-      color: #fff !important;
-    }               
-    .section-title {                    
-      font-size: 1.8rem;                    
-      font-weight: 700;                    
-      position: relative;                    
-      display: inline-block;                    
-    }                    
-    .section-title::after {                    
-      content: "";                    
-      display: block;                    
-      width: 60px;                    
-      height: 4px;    
-      margin-top:40px;
-      background: #6a1b9a;                    
-      margin: 6px auto 0;                    
-      border-radius: 2px;                    
-    }                    
-    .visi-misi {                    
-      font-weight: normal;                    
-      font-size: 1rem;                    
-      color: #2c2c2c;   
-      background-color: #f3e5f5;                    
-      padding: 20px;     
-      margin-top: 20px;
-      border-left: 6px solid #6a1b9a;                    
-      border-radius: 15px;                    
-      transition: all 0.3s ease-in-out;                    
-    }                    
-    .visi-misi:hover {                    
-      transform: translateY(-5px) scale(1.03);                    
-      box-shadow: 0 6px 16px rgba(0,0,0,0.2);                    
-    }                    
-    footer {                    
-      background-color: #a274db;                    
-      color: #000;                    
-      padding: 15px 20px;                    
-      display: flex;                    
-      justify-content: space-between;                    
-      align-items: center;                    
-      flex-wrap: wrap;                    
-    }                    
-    footer div{                    
-      display: flex;                    
-      justify-content: space-between;                    
-      align-items: center;                    
-      flex-wrap: wrap;                    
-    }                    
-    footer i {                    
-      font-size: 20px;                    
-      margin-right: 5px;                    
-    }                    
-    .owner img {                    
-      border-radius: 10px;   
-      margin-top: 20px;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.3);                    
-      width: 200px;                    
-    }                    
-  </style>                    
-</head>                    
-<body>                    
-                    
-  <nav class="navbar navbar-expand-lg" data-aos="fade-down">                    
-    <div class="container">                    
-      <a class="navbar-brand fw-bold" href="#">Rakka Petshop</a>                    
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">                    
-        <span class="navbar-toggler-icon"></span>                    
-      </button>                    
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">                    
-        <ul class="navbar-nav">                    
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>                    
-          <li class="nav-item"><a class="nav-link active fw-bold" href="about.html">About us</a></li>                    
-          <li class="nav-item"><a class="nav-link" href="product.html">Product & service</a></li>                                        
-          <li class="nav-item"><a class="nav-link" href="testimoni.html">Testimoni</a></li>                    
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>                    
-        </ul>                    
-      </div>                    
-    </div>                    
-  </nav>                    
-                    
-  <div class="container mt-4 text-center">                    
-    <!-- Sejarah -->
-    <div data-aos="fade-up">
-      <h4 class="section-title">Sejarah Toko :</h4>                    
-      <p class="mt-2">                    
-        Rakka petshop & pancing berdiri tahun 2015 di Cipatik. Toko ini berawal dari hobi si pemilik yang mencintai hewan peliharaan sekaligus gemar memancing.                     
-        Melihat banyaknya kebutuhan masyarakat terhadap produk perawatan hewan yang berkualitas serta perlengkapan memancing yang lengkap,                     
-        maka didirikanlah Rakka Petshop & Pancing.                    
-      </p>                    
-    </div>                    
-
-    <!-- Visi & Misi -->
-    <h4 class="section-title text-center mt-4" data-aos="fade-up">Visi & Misi</h4>                    
-    <div class="row g-3 mt-2 justify-content-center">                    
-      <!-- Visi -->                    
-      <div class="col-md-5" data-aos="zoom-in">                    
-        <div class="visi-misi text-center p-4 shadow-sm">                    
-          <i class="bi bi-eye-fill fs-2 text-primary mb-2"></i>                    
-          <h5 class="fw-bold mb-2">Visi</h5>                    
-          <p>Menyediakan pakan hewan serba ada dengan harga kompetitif.</p>                    
-        </div>                    
-      </div>                    
-      <!-- Misi -->                    
-      <div class="col-md-5" data-aos="zoom-in" data-aos-delay="200">                    
-        <div class="visi-misi text-center p-4 shadow-sm">                    
-          <i class="bi bi-bullseye fs-2 text-success mb-2"></i>                    
-          <h5 class="fw-bold mb-2">Misi</h5>                    
-          <p>Menjadi toko terdepan di bidang pakan hewan dengan menyediakan produk berkualitas dan pelayanan terbaik.</p>                    
-        </div>                    
-      </div>                    
-    </div>                    
-
-    <!-- Pemilik Toko -->
-    <div class="mt-5 owner" data-aos="fade-up">                    
-      <h4 class="fw-bold">Pemilik Toko</h4>                    
-      <img src="aa.jpg" alt="Pemilik Toko">                    
-      <p class="mt-2 fw-bold">Rakka Azril</p>                    
-    </div>                    
-  </div>                    
-                    
-  <footer class="mt-4">                    
-    <div>                    
-      <i class="bi bi-telephone-fill"></i> +62 896-8089-8279                    
-    </div>                    
-    <div>                    
-      © 2025 Rakka Petshop                    
-    </div>                    
-    <div>                    
-      <a href="https://maps.app.goo.gl/F8dKzHZwNsUsmQjV8" target="_blank" class="text-dark">                    
-        <i class="bi bi-geo-alt-fill"></i> Lokasi Toko                    
-      </a>                    
-    </div>                    
-  </footer>                    
-                    
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>                    
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>                    
-  <script>                    
-    AOS.init({                    
-      duration: 1000,                     
-      once: true                          
-    });                    
-  </script>                    
-</body>                    
+<!DOCTYPE html>                     
+<html lang="id">                      
+<head>                      
+  <meta charset="UTF-8">                      
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">                      
+  <title>Rakka Petshop</title>                      
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">                      
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">                      
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">                      
+                      
+  <style>                      
+    body {                      
+      font-family: Arial, sans-serif;                      
+      background-color: #d1a3ff; /* fallback warna */   
+      background-image: url("https://www.transparenttextures.com/patterns/paw-print.png");  
+      background-repeat: repeat;  
+      background-size: 150px;  
+    }                      
+    .navbar {                      
+      text-align: right;                      
+      background-color: #b085f5;                      
+    }     
+    /* Tombol kotak di navbar */   
+    .navbar .nav-link {  
+      background-color: #fff;  
+      margin: 3px;  
+      padding: 6px 14px;  
+      border-radius: 8px;  
+      font-weight: 500;  
+      color: #6a1b9a !important;  
+      transition: all 0.3s ease-in-out;  
+    }  
+    .navbar .nav-link:hover {  
+      background-color: #6a1b9a;  
+      color: #fff !important;  
+      transform: translateY(-2px);  
+    }  
+    .navbar .nav-link.active {  
+      background-color: #6a1b9a;  
+      color: #fff !important;  
+    }                 
+    .section-title {                      
+      font-size: 1.8rem;                      
+      font-weight: 700;                      
+      position: relative;                      
+      display: inline-block;                      
+    }                      
+    .section-title::after {                      
+      content: "";                      
+      display: block;                      
+      width: 60px;                      
+      height: 4px;      
+      margin-top:40px;  
+      background: #6a1b9a;                      
+      margin: 6px auto 0;                      
+      border-radius: 2px;                      
+    }                      
+    .visi-misi {                      
+      font-weight: normal;                      
+      font-size: 1rem;                      
+      color: #2c2c2c;     
+      background-color: #f3e5f5;                      
+      padding: 20px;       
+      margin-top: 20px;  
+      border-left: 6px solid #6a1b9a;                      
+      border-radius: 15px;                      
+      transition: all 0.3s ease-in-out;                      
+    }                      
+    .visi-misi:hover {                      
+      transform: translateY(-5px) scale(1.03);                      
+      box-shadow: 0 6px 16px rgba(0,0,0,0.2);                      
+    }                      
+    footer {                      
+      background-color: #a274db;                      
+      color: #000;                      
+      padding: 15px 20px;                      
+      display: flex;                      
+      justify-content: space-between;                      
+      align-items: center;                      
+      flex-wrap: wrap;                      
+    }                      
+    footer div{                      
+      display: flex;                      
+      justify-content: space-between;                      
+      align-items: center;                      
+      flex-wrap: wrap;                      
+    }                      
+    footer i {                      
+      font-size: 20px;                      
+      margin-right: 5px;                      
+    }                      
+    .owner img {                      
+      border-radius: 10px;     
+      margin-top: 20px;  
+      box-shadow: 0 3px 8px rgba(0,0,0,0.3);                      
+      width: 200px;                      
+    }                      
+  </style>                      
+</head>                      
+<body>                      
+                      
+  <nav class="navbar navbar-expand-lg" data-aos="fade-down">                      
+    <div class="container">                      
+      <a class="navbar-brand fw-bold" href="#">Rakka Petshop</a>                      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">                      
+        <span class="navbar-toggler-icon"></span>                      
+      </button>                      
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">                      
+        <ul class="navbar-nav">                      
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>                      
+          <li class="nav-item"><a class="nav-link active fw-bold" href="about.html">About us</a></li>                      
+          <li class="nav-item"><a class="nav-link" href="product.html">Product & service</a></li>                                          
+          <li class="nav-item"><a class="nav-link" href="testimoni.html">Testimoni</a></li>                      
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>                      
+        </ul>                      
+      </div>                      
+    </div>                      
+  </nav>                      
+                      
+  <div class="container mt-4 text-center">                      
+    <!-- Sejarah -->  
+    <div data-aos="fade-up">  
+      <h4 class="section-title">Sejarah Toko :</h4>                      
+      <p class="mt-2">                      
+        Rakka petshop & pancing berdiri tahun 2015 di Cipatik. Toko ini berawal dari hobi si pemilik yang mencintai hewan peliharaan sekaligus gemar memancing.                       
+        Melihat banyaknya kebutuhan masyarakat terhadap produk perawatan hewan yang berkualitas serta perlengkapan memancing yang lengkap,                       
+        maka didirikanlah Rakka Petshop & Pancing.                      
+      </p>                      
+    </div>                      
+  
+    <!-- Visi & Misi -->  
+    <h4 class="section-title text-center mt-4" data-aos="fade-up">Visi & Misi</h4>                      
+    <div class="row g-3 mt-2 justify-content-center">                      
+      <!-- Visi -->                      
+      <div class="col-md-5" data-aos="zoom-in">                      
+        <div class="visi-misi text-center p-4 shadow-sm">                      
+          <i class="bi bi-eye-fill fs-2 text-primary mb-2"></i>                      
+          <h5 class="fw-bold mb-2">Visi</h5>                      
+          <p>Menyediakan pakan hewan serba ada dengan harga kompetitif.</p>                      
+        </div>                      
+      </div>                      
+      <!-- Misi -->                      
+      <div class="col-md-5" data-aos="zoom-in" data-aos-delay="200">                      
+        <div class="visi-misi text-center p-4 shadow-sm">                      
+          <i class="bi bi-bullseye fs-2 text-success mb-2"></i>                      
+          <h5 class="fw-bold mb-2">Misi</h5>                      
+          <p>Menjadi toko terdepan di bidang pakan hewan dengan menyediakan produk berkualitas dan pelayanan terbaik.</p>                      
+        </div>                      
+      </div>                      
+    </div>                      
+  
+    <!-- Pemilik Toko -->  
+    <div class="mt-5 owner" data-aos="fade-up">                      
+      <h4 class="fw-bold">Pemilik Toko</h4>                      
+      <img src="aa.jpg" alt="Pemilik Toko">                      
+      <p class="mt-2 fw-bold">Rakka Azril</p>                      
+    </div>                      
+  </div>                      
+                      
+  <footer class="mt-4">                      
+    <div>                      
+      <i class="bi bi-telephone-fill"></i> +62 896-8089-8279                      
+    </div>                      
+    <div>                      
+      © 2025 Rakka Petshop                      
+    </div>                      
+    <div>                      
+      <a href="https://maps.app.goo.gl/F8dKzHZwNsUsmQjV8" target="_blank" class="text-dark">                      
+        <i class="bi bi-geo-alt-fill"></i> Lokasi Toko                      
+      </a>                      
+    </div>                      
+  </footer>                      
+                      
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>                      
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>                      
+  <script>                      
+    AOS.init({                      
+      duration: 1000,                       
+      once: true                            
+    });                      
+  </script>                      
+</body>                      
 </html>
