@@ -13,11 +13,17 @@
         
   <style>        
     body {        
-      background-color: #c8a9f0;        
       font-family: "Poppins", sans-serif;        
       display: flex;        
       flex-direction: column;        
       min-height: 100vh;        
+      background-color: #f7f3fc; /* lembut */  
+      background-image: linear-gradient(135deg, rgba(178,138,224,0.15) 25%, transparent 25%),  
+                        linear-gradient(225deg, rgba(178,138,224,0.15) 25%, transparent 25%),  
+                        linear-gradient(45deg, rgba(178,138,224,0.15) 25%, transparent 25%),  
+                        linear-gradient(315deg, rgba(178,138,224,0.15) 25%, #f7f3fc 25%);  
+      background-size: 40px 40px;  
+      background-repeat: repeat;  
     }        
     .navbar {        
       text-align: right;        
@@ -41,22 +47,33 @@
       background-color: #6a1b9a;        
       color: #fff !important;        
     }        
+
     /* Produk */        
     .product-card {        
       border: none;        
-      background: transparent;        
+      background: #fff;        
+      border-radius: 12px;  
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);  
+      overflow: hidden;  
       transition: transform 0.3s ease;        
     }        
-    .product-card img {        
-      border-radius: 5px;        
-      transition: transform 0.3s ease;        
-      height: 160px;        
-      object-fit: cover;        
-      cursor: pointer;        
+    .product-card:hover {        
+      transform: translateY(-5px);        
     }        
-    .product-card img:hover {        
-      transform: scale(1.15);        
+    .product-image {        
+      text-align: center;        
+      background: #f3e9fc;        
+      padding: 15px;        
     }        
+    .product-image img {        
+      max-height: 160px;        
+      object-fit: contain;        
+    }        
+    .product-desc {        
+      padding: 15px;        
+      text-align: left;        
+    }        
+
     /* Service */        
     .service-item img {        
       width: 100px;        
@@ -114,197 +131,56 @@
   <section class="py-4">        
     <div class="container">        
       <h4 class="fw-bold text-center mb-4" data-aos="fade-down">Produk Kami</h4>        
-      <!-- Tabs -->        
-      <ul class="nav nav-tabs justify-content-center mb-4" id="productTabs" role="tablist">        
-        <li class="nav-item"><button class="nav-link active" id="kucing-tab" data-bs-toggle="tab" data-bs-target="#kucing" type="button" role="tab">Makanan Kucing</button></li>        
-        <li class="nav-item"><button class="nav-link" id="anjing-tab" data-bs-toggle="tab" data-bs-target="#anjing" type="button" role="tab">Makanan Anjing</button></li>        
-        <li class="nav-item"><button class="nav-link" id="hewan-tab" data-bs-toggle="tab" data-bs-target="#hewan" type="button" role="tab">Hewan Kecil</button></li>        
-        <li class="nav-item"><button class="nav-link" id="ikan-tab" data-bs-toggle="tab" data-bs-target="#ikan" type="button" role="tab">Makanan Ikan</button></li>        
-      </ul>        
-      <!-- Tab Content -->        
-      <div class="tab-content">        
-        <!-- Kucing -->        
-        <div class="tab-pane fade show active" id="kucing" role="tabpanel">        
-          <div class="row g-3">        
-            <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up">        
-              <div class="card product-card text-center">        
-                <img src="whiskas.png" alt="Whiskas Junior">        
-                <div class="card-body">        
-                  <h6 class="fw-bold">Whiskas Junior</h6>        
-                  <p>Rp. 36.000</p>        
-                  <button class="btn btn-sm btn-outline-primary" onclick="showImage('whiskas.png', 'Whiskas Junior', 'Whiskas khusus anak kucing, kaya protein dan vitamin untuk pertumbuhan optimal.')">Lihat Deskripsi</button>        
-                </div>        
-              </div>        
-            </div>        
-            <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up" data-aos-delay="100">        
-              <div class="card product-card text-center">        
-                <img src="royal.png" alt="Royal Canin">        
-                <div class="card-body">        
-                  <h6 class="fw-bold">Royal Canin</h6>        
-                  <p>Rp. 80.000</p>        
-                  <button class="btn btn-sm btn-outline-primary" onclick="showImage('royal.png', 'Royal Canin', 'Makanan kucing premium Royal Canin dengan nutrisi seimbang untuk kesehatan bulu dan pencernaan.')">Lihat Deskripsi</button>        
-                </div>        
-              </div>        
-            </div>        
+
+      <!-- Kucing -->        
+      <div class="row g-4 mb-4" data-aos="fade-up">        
+        <div class="col-md-4">        
+          <div class="product-image">        
+            <img src="whiskas.png" alt="Whiskas Junior">        
           </div>        
         </div>        
-        <!-- Anjing -->        
-        <div class="tab-pane fade" id="anjing" role="tabpanel">        
-          <div class="row g-3">        
-            <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up">        
-              <div class="card product-card text-center">        
-                <img src="rocco.png" alt="Rocco Puppy">        
-                <div class="card-body">        
-                  <h6 class="fw-bold">Rocco Puppy</h6>        
-                  <p>Rp. 65.000</p>        
-                  <button class="btn btn-sm btn-outline-primary" onclick="showImage('rocco.png', 'Rocco Puppy', 'Makanan anjing puppy premium dengan rasa daging asli, membantu pertumbuhan sehat.')">Lihat Deskripsi</button>        
-                </div>        
-              </div>        
-            </div>        
-          </div>        
-        </div>        
-        <!-- Hewan Kecil -->        
-        <div class="tab-pane fade" id="hewan" role="tabpanel">        
-          <div class="row g-3">        
-            <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up">        
-              <div class="card product-card text-center">        
-                <img src="kelinci.png" alt="Bunny Britter">        
-                <div class="card-body">        
-                  <h6 class="fw-bold">Bunny Britter</h6>        
-                  <p>Rp. 45.000</p>        
-                  <button class="btn btn-sm btn-outline-primary" onclick="showImage('kelinci.png', 'Bunny Britter', 'Makanan sehat untuk kelinci dengan nutrisi lengkap. Cocok untuk pertumbuhan dan kesehatan bulu.')">Lihat Deskripsi</button>        
-                </div>        
-              </div>        
-            </div>        
-            <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up" data-aos-delay="100">        
-              <div class="card product-card text-center">        
-                <img src="marmot.png" alt="Natural HamsterFood">        
-                <div class="card-body">        
-                  <h6 class="fw-bold">Natural HamsterFood</h6>        
-                  <p>Rp. 16.000</p>        
-                  <button class="btn btn-sm btn-outline-primary" onclick="showImage('marmot.png', 'Natural HamsterFood', 'Pakan hamster alami dengan biji-bijian dan kacang pilihan, membantu energi sepanjang hari.')">Lihat Deskripsi</button>        
-                </div>        
-              </div>        
-            </div>        
-          </div>        
-        </div>        
-        <!-- Ikan -->        
-        <div class="tab-pane fade" id="ikan" role="tabpanel">        
-          <div class="row g-3">        
-            <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up">        
-              <div class="card product-card text-center">        
-                <img src="koi.png" alt="San-koi Spirulina">        
-                <div class="card-body">        
-                  <h6 class="fw-bold">San-koi Spirulina</h6>        
-                  <p>Rp. 75.000</p>        
-                  <button class="btn btn-sm btn-outline-primary" onclick="showImage('koi.png', 'San-koi Spirulina', 'Pakan ikan koi berkualitas dengan kandungan spirulina, menjaga warna dan kesehatan ikan.')">Lihat Deskripsi</button>        
-                </div>        
-              </div>        
+        <div class="col-md-8">        
+          <div class="product-card">        
+            <div class="product-desc">        
+              <h5 class="fw-bold">Whiskas Junior</h5>        
+              <p class="text-muted">Rp. 36.000</p>        
+              <p>Whiskas khusus anak kucing, kaya protein dan vitamin untuk pertumbuhan optimal.</p>        
             </div>        
           </div>        
         </div>        
       </div>        
+
+      <div class="row g-4 mb-4" data-aos="fade-up" data-aos-delay="100">        
+        <div class="col-md-4">        
+          <div class="product-image">        
+            <img src="royal.png" alt="Royal Canin">        
+          </div>        
+        </div>        
+        <div class="col-md-8">        
+          <div class="product-card">        
+            <div class="product-desc">        
+              <h5 class="fw-bold">Royal Canin</h5>        
+              <p class="text-muted">Rp. 80.000</p>        
+              <p>Makanan kucing premium Royal Canin dengan nutrisi seimbang untuk kesehatan bulu dan pencernaan.</p>        
+            </div>        
+          </div>        
+        </div>        
+      </div>        
+
     </div>        
   </section>        
 
-  <!-- Service Section (TIDAK DIUBAH) -->        
-  <section class="py-5">        
-    <div class="container">        
-      <h4 class="fw-bold text-center mb-5" data-aos="fade-down">Layanan Kami</h4>        
-      <div class="row text-center">        
-        <div class="col-md-4 service-item" data-aos="fade-up">        
-          <img src="makanan.png" alt="Produk Lengkap" data-bs-toggle="modal" data-bs-target="#modalMakanan">        
-          <p>Produk lengkap <br> dan berkualitas</p>        
-        </div>        
-        <div class="col-md-4 service-item" data-aos="fade-up" data-aos-delay="100">        
-          <img src="duit.png" alt="Harga Terjangkau" data-bs-toggle="modal" data-bs-target="#modalHarga">        
-          <p>Harga Terjangkau</p>        
-        </div>        
-        <div class="col-md-4 service-item" data-aos="fade-up" data-aos-delay="200">        
-          <img src="layanan.png" alt="Pelayanan Ramah" data-bs-toggle="modal" data-bs-target="#modalLayanan">        
-          <p>Pelayanan ramah <br> dan cepat</p>        
-        </div>        
-      </div>        
-      <!-- Why Choose Us -->        
-      <div class="row mt-5" data-aos="zoom-in">        
-        <div class="col-md-8 offset-md-2 text-center">        
-          <h5 class="fw-bold">Kenapa Memilih Rakka Petshop?</h5>        
-          <p>Kami menyediakan produk hewan berkualitas dengan harga terjangkau, layanan ramah, dan selalu siap membantu kebutuhan hewan kesayangan Anda.</p>        
-          <a href="https://wa.me/6289680898279?text=Halo%20Rakka%20Petshop,%20saya%20ingin%20bertanya%20tentang%20produk%20dan%20layanan." target="_blank" class="btn btn-success px-4 py-2 mt-3 rounded-pill shadow-sm">    
-             <i class="bi bi-whatsapp"></i> Tanyakan Kami    
-          </a>    
-        </div>        
-      </div>        
-    </div>        
-  </section>        
-
-  <!-- Footer (TIDAK DIUBAH) -->        
+  <!-- Footer -->        
   <footer>        
     <div><i class="bi bi-telephone-fill"></i> +62 896-8089-8279</div>        
     <div>© 2025 Rakka Petshop</div>        
     <div><a href="https://maps.app.goo.gl/F8dKzHZwNsUsmQjV8" target="_blank" class="text-dark"><i class="bi bi-geo-alt-fill"></i> Lokasi Toko</a></div>        
   </footer>        
 
-  <!-- Modal Produk -->        
-  <div class="modal fade" id="imageModal" tabindex="-1">        
-    <div class="modal-dialog modal-dialog-centered modal-lg">        
-      <div class="modal-content p-3">        
-        <img id="modalImage" src="" alt="" class="w-100 rounded mb-3">        
-        <h5 id="modalTitle" class="fw-bold"></h5>        
-        <p id="modalDesc"></p>        
-      </div>        
-    </div>        
-  </div>        
-
-  <!-- Modal Service (TIDAK DIUBAH) -->        
-  <div class="modal fade" id="modalMakanan" tabindex="-1">        
-    <div class="modal-dialog modal-dialog-centered">        
-      <div class="modal-content">        
-        <div class="modal-body text-center">        
-          <img src="makanan.png" class="img-fluid mb-3" alt="Produk Lengkap">        
-          <h6 class="fw-bold">Produk Lengkap dan Berkualitas</h6>        
-          <p>Kami menyediakan berbagai macam makanan, vitamin, dan aksesoris untuk hewan peliharaan Anda.</p>        
-        </div>        
-      </div>        
-    </div>        
-  </div>        
-  <div class="modal fade" id="modalHarga" tabindex="-1">        
-    <div class="modal-dialog modal-dialog-centered">        
-      <div class="modal-content">        
-        <div class="modal-body text-center">        
-          <img src="duit.png" class="img-fluid mb-3" alt="Harga Terjangkau">        
-          <h6 class="fw-bold">Harga Terjangkau</h6>        
-          <p>Produk dengan kualitas terbaik namun tetap ramah di kantong.</p>        
-        </div>        
-      </div>        
-    </div>        
-  </div>        
-  <div class="modal fade" id="modalLayanan" tabindex="-1">        
-    <div class="modal-dialog modal-dialog-centered">        
-      <div class="modal-content">        
-        <div class="modal-body text-center">        
-          <img src="layanan.png" class="img-fluid mb-3" alt="Pelayanan Ramah">        
-          <h6 class="fw-bold">Pelayanan Ramah dan Cepat</h6>        
-          <p>Staf kami siap melayani Anda dengan ramah, cepat, dan profesional.</p>        
-        </div>        
-      </div>        
-    </div>        
-  </div>        
-
   <!-- Bootstrap JS -->        
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>        
   <!-- AOS JS -->        
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>        
   <script>AOS.init();</script>        
-
-  <script>        
-    function showImage(src, title, desc) {        
-      document.getElementById("modalImage").src = src;        
-      document.getElementById("modalTitle").innerText = title;        
-      document.getElementById("modalDesc").innerText = desc;        
-      let modal = new bootstrap.Modal(document.getElementById('imageModal'));        
-      modal.show();        
-    }        
-  </script>        
 </body>        
-        </html>
+</html>
