@@ -83,6 +83,7 @@
       height: 50%;
       object-fit: cover;
       width: 50%;
+      margin-top: 30px;
     }
     .flip-card-front h6,
     .flip-card-front p {
@@ -118,6 +119,13 @@
       text-align: center;
       font-weight: 500;
     }
+    .flip-card-front img {
+  margin-top: 80px;
+  max-width: 100px; /* batasi ukuran maksimal gambar */
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
     footer {
       background-color: #a274db;
       color: #000;
@@ -131,6 +139,17 @@
     footer i {
       font-size: 20px;
       margin-right: 5px;
+    }
+
+    /* Responsive Desktop */
+    @media (min-width: 992px) {
+      .flip-card-inner {
+        height: 320px; /* perbesar tinggi card */
+      }
+      .flip-card-front img {
+        width: 70%;   /* gambar lebih besar */
+        height: auto; /* proporsional */
+      }
     }
   </style>
 </head>
@@ -169,8 +188,8 @@
       <div class="tab-content">
         <!-- Kucing -->
         <div class="tab-pane fade show active" id="kucing" role="tabpanel">
-          <div class="row g-3">
-            <div class="col-lg-3 col-md-4 col-6" data-aos="fade-up">
+          <div class="row g-3 justify-content-center">
+            <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up">
               <div class="flip-card">
                 <div class="flip-card-inner">
                   <!-- Depan -->
@@ -190,7 +209,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 col-md-4 col-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="100">
               <div class="flip-card">
                 <div class="flip-card-inner">
                   <div class="flip-card-front">
@@ -212,8 +231,8 @@
         </div>
         <!-- Anjing -->
         <div class="tab-pane fade" id="anjing" role="tabpanel">
-          <div class="row g-3">
-            <div class="col-lg-3 col-md-4 col-6" data-aos="fade-up">
+          <div class="row g-3 justify-content-center">
+            <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up">
               <div class="flip-card">
                 <div class="flip-card-inner">
                   <div class="flip-card-front">
@@ -235,8 +254,8 @@
         </div>
         <!-- Hewan Kecil -->
         <div class="tab-pane fade" id="hewan" role="tabpanel">
-          <div class="row g-3">
-            <div class="col-lg-3 col-md-4 col-6" data-aos="fade-up">
+          <div class="row g-3 justify-content-center">
+            <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up">
               <div class="flip-card">
                 <div class="flip-card-inner">
                   <div class="flip-card-front">
@@ -254,7 +273,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 col-md-4 col-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="100">
               <div class="flip-card">
                 <div class="flip-card-inner">
                   <div class="flip-card-front">
@@ -276,8 +295,8 @@
         </div>
         <!-- Ikan -->
         <div class="tab-pane fade" id="ikan" role="tabpanel">
-          <div class="row g-3">
-            <div class="col-lg-3 col-md-4 col-6" data-aos="fade-up">
+          <div class="row g-3 justify-content-center">
+            <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up">
               <div class="flip-card">
                 <div class="flip-card-inner">
                   <div class="flip-card-front">
@@ -380,4 +399,4 @@
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>AOS.init();</script>
 </body>
-                               </html>
+</html> 
