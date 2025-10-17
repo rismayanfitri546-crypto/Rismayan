@@ -1,0 +1,173 @@
+body {  
+  background-color: #c8a9f0;  
+  font-family: "Poppins", sans-serif;  
+  display: flex;  
+  flex-direction: column;  
+  min-height: 100vh;  
+}  
+  
+/* Navbar */  
+.navbar {  
+  text-align: right;  
+  background-color: #b38ae0;  
+  font-family: "Poppins", sans-serif;  
+}  
+.navbar-brand {  
+  font-weight: 700;  
+  color: black;  
+  font-size: 22px;  
+}  
+.navbar-brand img {  
+  height: 50px;  
+}  
+  
+/* Navbar tombol kotak */  
+.navbar .nav-link {  
+  background-color: #fff;  
+  margin: 3px;  
+  padding: 8px 16px;  
+  border-radius: 8px;  
+  font-weight: 500;  
+  font-size: 17px;  
+  color: #6a1b9a !important;  
+  transition: all 0.3s ease-in-out;  
+}  
+.navbar .nav-link:hover {  
+  background-color: #6a1b9a;  
+  color: #fff !important;  
+  transform: translateY(-2px);  
+}  
+.navbar .nav-link.active {  
+  background-color: #6a1b9a;  
+  color: #fff !important;  
+}  
+  
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 5%; /* kurangi padding biar gak panjang */
+  gap: 20px;
+  flex: 1;
+  min-height: 80vh; /* batasi tinggi maksimal */
+}
+
+.hero .btn {
+  background-color: #b38ae0; /* ungu lembut seperti navbar */
+  color: #000; /* teks tombol hitam */
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-weight: 600;
+  font-size: 17px;
+  transition: 0.3s;
+  border: none;
+}
+
+.hero .btn:hover {
+  background-color: #6a1b9a; /* ungu tua saat hover */
+  color: #black; /* teks putih saat hover */
+}
+
+.hero img {
+  max-width: 480px; /* cukup besar tapi gak bikin hero turun */
+  height: auto;
+}
+
+.hero h1 {
+  font-size: 50px;
+  font-weight: bold;
+  color: black;
+}
+
+ .hero p {
+    font-size: 16px;
+    color: black;
+  }
+
+/* Responsif untuk HP */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 20px;
+    min-height: auto;
+  }
+  
+  .hero .btn {
+  background-color: #b38ae0; /* ungu lembut seperti navbar */
+  color: #000; /* teks tombol hitam */
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-weight: 600;
+  font-size: 17px;
+  transition: 0.3s;
+  border: none;
+}
+
+.hero .btn:hover {
+  background-color: #6a1b9a; /* ungu tua saat hover */
+  color: #black; 
+}
+
+  .hero img {
+    max-width: 300px;
+    margin-top: 20px;
+  }
+
+  .hero h1 {
+    font-size: 35px;
+    font-weight: bold;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+}
+  
+/* Footer */  
+footer {  
+  background-color: #a274db;  
+  color: #000;  
+  padding: 15px 20px;  
+  display: flex;  
+  justify-content: space-between;  
+  align-items: center;  
+  flex-wrap: wrap;  
+  font-family: "Poppins", sans-serif;  
+  font-size: 16px;  
+}  
+footer div {  
+  display: flex;  
+  justify-content: space-between;  
+  align-items: center;  
+  flex-wrap: wrap;  
+}  
+footer i {  
+  font-size: 20px;  
+  margin-right: 5px;  
+}  
+  
+/* Instagram Icon Warna Khas */  
+footer a .bi-instagram {  
+  font-size: 22px;  
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);  
+  -webkit-background-clip: text;  
+  -webkit-text-fill-color: transparent;  
+}
+
+.hero .btn {
+  background-color: #a274db; /* ungu lembut */
+  color: #fff;               /* teks putih biar kontras */
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-weight: 600;
+  font-size: 17px;
+  transition: all 0.3s ease-in-out;
+}
+
+.hero .btn:hover {
+  background-color: #8a5cc5; /* ungu sedikit lebih gelap saat hover */
+  transform: translateY(-2px);
+  color: #fff;
+}
